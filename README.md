@@ -1,4 +1,5 @@
 #ANN-v1.0
+
 #include "ANN.h"
 Let's start with an explanation of an artificial neuron and then move on to an artificial neural network.
 
