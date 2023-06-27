@@ -1,7 +1,7 @@
 #ANN-v1.0
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
 #include "ANN.h"
-
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
 Let's start with an explanation of an artificial neuron and then move on to an artificial neural network.
 
 Artificial Neuron:
@@ -39,5 +39,41 @@ Here's an overview of the main components and concepts in an artificial neural n
 By combining multiple artificial neurons in a network with interconnected layers, an artificial neural network can tackle various tasks such as classification, regression, pattern recognition, and more.
 
 I hope this explanation helps clarify the concepts of artificial neurons and artificial neural networks in simple terms!
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------- Let's go through the main components and functionality of this library:
+______________________________________________________________________
 
+1. Header file "ANN.h":
+   - This file includes the necessary libraries and defines the `ANN` class using the `class` keyword.
+   - The `ANN` class encapsulates the functionality of the neural network.
+
+2. Constructor:
+   - The `ANN` constructor takes parameters such as the number of input nodes, hidden nodes, output nodes, and learning rate.
+   - It initializes the member variables and dynamically allocates memory for the arrays used to store weights, biases, and outputs.
+
+3. `initializeWeights()` function:
+   - This function is responsible for initializing the weights and biases of the neural network.
+   - It uses a loop to assign random values within the range of -1 to 1 to the weight and bias arrays.
+
+4. `sigmoid()` function:
+   - This function calculates the sigmoid activation function for a given input value.
+   - It uses the mathematical formula 1 / (1 + exp(-x)) to compute the sigmoid output.
+
+5. `forwardPropagation()` function:
+   - This function performs the forward propagation step of the neural network.
+   - It takes an array of input values and calculates the outputs of the hidden nodes and final outputs using the sigmoid activation function.
+   - The calculations involve matrix multiplications between the input values, weights, and biases.
+
+6. `backwardPropagation()` function:
+   - This function implements the backward propagation step of the neural network.
+   - It takes the input values, target values, and output values as inputs.
+   - It calculates the errors and adjusts the weights and biases based on the errors and the learning rate.
+
+7. `train()` function:
+   - This function combines the forward propagation and backward propagation steps to train the neural network.
+   - It takes the input values and target values as inputs, performs forward and backward propagation, and updates the network's weights and biases.
+
+The provided code offers a basic implementation of an ANN that can be used for training and prediction tasks. However, it's worth noting that this implementation might have limitations or might not be optimized for complex scenarios. Neural network architectures, activation functions, and optimization techniques can vary depending on the specific problem domain and requirements.
+
+To use this ANN library, you would typically include the "ANN.h" header file in your code, create an `ANN` object with the desired parameters, and then use the `train()` and `predict()` methods to train the network and make predictions, respectively.
+
+Keep in mind that if you plan to use this library, you should ensure that you have the necessary libraries and functions available or make the appropriate modifications to fit your specific environment or programming setup.
