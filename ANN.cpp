@@ -5,7 +5,11 @@ ANN::ANN(int inputNodes, int hiddenNodes, int outputNodes, float learningRate) {
   this->hiddenNodes = hiddenNodes;
   this->outputNodes = outputNodes;
   this->learningRate = learningRate;
-
+/*This line assigns the value of the inputNodes parameter passed to the 
+  constructor to the inputNodes member variable of the ANN class. The this-> syntax is used to distinguish between the local parameter and the member variable with 
+  the same name. By assigning the constructor parameters to the corresponding member variables, the values provided when creating an instance of the ANN class are stored 
+  within the object. These member variables can then be accessed and used throughout the class implementation as needed. Note that the this pointer is used here to 
+  disambiguate between the parameter and the member variable with the same name. It ensures that the assignment is made to the correct variable in the class scope.*/
   inputWeights = new float[inputNodes * hiddenNodes];
   hiddenWeights = new float[hiddenNodes * outputNodes];
   hiddenBiases = new float[hiddenNodes];
